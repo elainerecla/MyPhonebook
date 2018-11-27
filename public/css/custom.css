@@ -1,0 +1,24 @@
+/********************/
+/*****CUSTOM CSS*****/
+/********************/
+
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
+
+  .container{
+    text-align: center;
+  }
+
+  .footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #33774b;
+    color: white;
+    padding: 15px 30px;
+  }
