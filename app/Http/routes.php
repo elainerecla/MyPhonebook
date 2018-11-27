@@ -44,6 +44,10 @@ Route::get('/signup/termsofservices', function () {
     return view('pages.termsofservices');
 });
 
+Route::get('/myprofile', function () {
+    return view('pages.myprofile');
+});
+
 Route::get('/userimage/{filename}', 'UserAccntController@getUserImg')->name('account.image');
 Route::get('/contacts/{authid}', 'ContactController@index')->name('contactpage');
 Route::get('/home', 'HomeController@index');

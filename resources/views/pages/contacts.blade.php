@@ -4,7 +4,8 @@
 <div class="container-fluid" style="padding: 20px 0px; height:500px; ">
     <div class="row">
         @include('inc.sidenav')
-
+        @include('modals.addcontact')
+        
         <div class="col-sm-10">
             <button type="button" class="btn btn-outline-info mb-2" data-toggle="modal" data-target="#addcontact"><img src="/images/plus.png" alt="plus"> Add contact</button>
             <div class="table" style="overflow-y:scroll; height: 380px">
@@ -34,6 +35,9 @@
                                         </td>
                                     </tr>
                                 @endif
+
+                                @include('modals.editcontact')
+                                @include('modals.deletecontact')
                             @endforeach
                         @endif
                     </tbody>
@@ -44,10 +48,3 @@
     
 </div>
 @endsection
-
-<!--Modals here-->
-@include('modals.addcontact')
-@if(count($contacts) > 0)
-    @include('modals.editcontact')
-    @include('modals.deletecontact')
-@endif

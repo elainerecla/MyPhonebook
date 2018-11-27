@@ -16,20 +16,6 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="/">Dashboard <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Menu A</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Menu B
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
             </ul>
             
             <ul class="navbar-nav ml-auto">
@@ -38,8 +24,8 @@
                         <img src= {{route('account.image', ['filename' => $currentauth->photofilename])}} alt="profile picture" width="48px;"> {{$currentauth->firstname}} {{$currentauth->lastname}}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="accountdropdown">
-                    <a class="dropdown-item" href="#">My Profile</a>
-                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="/myprofile">My Profile</a>
+                    <a class="dropdown-item" href="#">Change Password</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/logout">Logout</a>
                     </div>

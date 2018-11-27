@@ -10,11 +10,11 @@
             </div>
             {{Form::open(['action' => ['ContactController@update', $contact->id], 'files' => true, 'method' => 'PATCH'])}}
             <div class="modal-body">
-                <div class="row">
+                <div class="row"> 
                     @include('inc.message')
                     
                     <div class="col-sm-4"> 
-                        <img src="/images/noimage.png" alt="profilepic" class="img-thumbnail" id="profilepic">
+                        <img src={{route('account.image', ['filename' => $contact->photofilename])}} alt="profilepic" class="img-thumbnail" id="profilepic">
                     </div>
                     <div class="col-sm-8" style="overflow:hidden;">
                         {{Form::label('fileUploadprofile', 'Update photo', ['class' => 'form-label'])}}
